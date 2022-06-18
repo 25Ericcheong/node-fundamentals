@@ -7,4 +7,7 @@ function log(message) {
 }
 
 // adds to exports key of module object with logger key
-module.exports.log = log;
+// module.exports.log = log;
+
+// can replace entire object with a function instead
+module.exports = log;
