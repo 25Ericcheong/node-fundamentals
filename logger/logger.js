@@ -1,3 +1,6 @@
+console.log(__filename);
+console.log(__dirname);
+
 // as an example
 var url = "http://mylogger.io/log";
 
