@@ -1,6 +1,6 @@
-// node assumes this is built in module and if it doesn't exist - node will look for existing file
-const path = require("path");
+const fs = require("fs");
 
-var pathObj = path.parse(__filename);
+// returns all files in current directory
+const files = fs.readdirSync("./");
 
-console.log(pathObj);
+console.log(files);
