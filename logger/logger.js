@@ -1,4 +1,7 @@
+// complete path to file
 console.log(__filename);
+
+// path to directory that contains module
 console.log(__dirname);
 
 // as an example
