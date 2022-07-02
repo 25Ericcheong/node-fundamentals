@@ -6,11 +6,12 @@ const emitter = new EventEmitter(); // this is an object
 
 // order matters - must have a listener first before emitting something
 // register a listener
-emitter.on("messageLogged", function (arg) {
+emitter.on("messageLogged", (arg) => {
   console.log("Listener called", arg);
 });
 
-// raises an event or emits an event
-// most of the time want to send information or data
-// best practice is to send data as an object
-emitter.emit("messageLogged", { id: 1, url: "http://" });
+const log = require("./logger");
+
+// this will only console log message instead of the object in logger.js
+// this is the case because both files have different emitter objects
+log("message");
