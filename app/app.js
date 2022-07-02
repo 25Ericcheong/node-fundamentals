@@ -4,6 +4,7 @@ const EventEmitter = require("events");
 
 const emitter = new EventEmitter(); // this is an object
 
+// order matters - must have a listener first before emitting something
 // register a listener
 emitter.on("messageLogged", function () {
   console.log("Listener called");
