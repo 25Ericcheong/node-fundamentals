@@ -6,10 +6,11 @@ const emitter = new EventEmitter(); // this is an object
 
 // order matters - must have a listener first before emitting something
 // register a listener
-emitter.on("messageLogged", function () {
-  console.log("Listener called");
+emitter.on("messageLogged", function (arg) {
+  console.log("Listener called", arg);
 });
 
-// emit means make a noise or produce something (signaling that an event has occurred)
 // raises an event or emits an event
-emitter.emit("messageLogged");
+// most of the time want to send information or data
+// best practice is to send data as an object
+emitter.emit("messageLogged", { id: 1, url: "http://" });
