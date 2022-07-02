@@ -1,15 +1,14 @@
-// naming convention used to indicate that this is a class
-// has tone of useful properties and methods
-const EventEmitter = require("events");
+const http = require("http");
 
-const Logger = require("./logger");
-const logger = new Logger();
+// create a web server
+// server has (inherits) eventEmitter in it too
+const server = http.createServer();
 
-// order matters - must have a listener first before emitting something
-// register a listener
-logger.on("messageLogged", (arg) => {
-  console.log("Listener called", arg);
+server.on("connection", (socket) => {
+  console.log("New connection");
 });
 
-// this calls a method from logger object from logger module which emits or creates an event
-logger.log("message");
+server.listen(3000);
+
+// server listens to port 3000
+console.log("Listening on port 3000");
