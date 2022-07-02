@@ -2,10 +2,11 @@ const http = require("http");
 
 // create a web server
 // server has (inherits) eventEmitter in it too
-const server = http.createServer();
-
-server.on("connection", (socket) => {
-  console.log("New connection");
+const server = http.createServer((req, res) => {
+  if (req.url === "/") {
+    res.write("Hello world");
+    res.end();
+  }
 });
 
 server.listen(3000);
