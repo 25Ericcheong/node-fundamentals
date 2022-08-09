@@ -11,7 +11,12 @@ Key features:
 - Standard libraries written to be non-blocking (asynchronous)
 - Thread will not be blocked (which wastes CPU cycles). Example - single thread will be used to handle request heavy 1 and while that request is being processed, the single thread is used to handle a different requeest. When heavy request 1 is completed, a message is sent to event queue and Node.js would continuously monitor this. Any message found in this queue will be taken out and processed by Node.js (making it ideal for I/O-intensive apps - disk or networking associated task but not for CPU-intensitve apps) (1)
 
+# Useful Node Modules
+## nodemon
+- Can be used to restart application automatically when a change is made to file. Instructions can be found here: https://nodejs.dev/learn/run-nodejs-scripts-from-the-command-line
+
 # Additional JavaScript information
+## JavaScript is a compiled language
 - JavaScript used to be an interpreted language (line by line execution) but is now a compiled language (2)
 
 References:
