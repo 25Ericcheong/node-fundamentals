@@ -1,2 +1,3 @@
-const port = process.env.PORT;
-console.log(`Port is ${port}`);
+const dotenv = require('dotenv');
+dotenv.config();
+console.log(`Your port is ${process.env.PORT}`);
