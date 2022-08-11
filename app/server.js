@@ -1,1 +1,3 @@
-console.log(process.env.PORT);
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+})
