@@ -34,6 +34,10 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
 - Arguments an be a value or a key and a value. Can be retrieved using `process` object built into Node.js which expose an `argv` property that contains all command line invocation arguments. First is the full path of `node` command, second is full path of file being executed and all additional arguments are present from third position going forward.
 
+### Output to Command Line
+
+- With `console` module, can use `console.count()` to check number of time a variable has been checked.
+
 # Useful Node Modules
 
 ## nodemon
