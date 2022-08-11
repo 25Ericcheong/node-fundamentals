@@ -30,6 +30,10 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - It is preferred to not have runtime dependency. Will neeed to save it as a dev dependency with this command `npm install dotenv --save-dev`. Then remove any code that uses require on dotenv including `dotenv.config()`. Can then run code using `-require` which is also `-r` to preload dotenv. Will be useful when you want app to run somewhere file may not exist like running docket container or cloud server.
 - Can leverage this with npm scripts.
 
+### Accepting Arguments
+
+- Arguments an be a value or a key and a value. Can be retrieved using `process` object built into Node.js which expose an `argv` property that contains all command line invocation arguments. First is the full path of `node` command, second is full path of file being executed and all additional arguments are present from third position going forward.
+
 # Useful Node Modules
 
 ## nodemon
