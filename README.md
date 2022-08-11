@@ -36,7 +36,7 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
 ### Output to Command Line
 
-- With `console` module, can use `console.count()` to check number of time a variable has been checked.
+- With `console` module, can use `console.count()` to check number of time a variable has been checked. `console.count()` can also be used with a loop and if only a variable is passed into it, it logs the number of time this variable (or value) has been found or checked.
 
 # Useful Node Modules
 
