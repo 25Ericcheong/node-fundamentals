@@ -27,7 +27,8 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - Reading a .env file can be done with dotenv package and can be acquired with `npm install dotenv` (this is a runtime dependency) and can then use its config function. More can be found in branch no. 5.
 - Environment variables can be imported into a single file which will be used by all other files which the single file would export as a module. Will need to manually add additional variables to config file (which reads .env file) but this can be done automatically as well.
 - Can also use a library to read and export them in a module
-- It is preferred to not have runtime dependency. Will neeed to save it as a dev dependency with this command `npm install dotenv --save-dev`
+- It is preferred to not have runtime dependency. Will neeed to save it as a dev dependency with this command `npm install dotenv --save-dev`. Then remove any code that uses require on dotenv including `dotenv.config()`. Can then run code using `-require` which is also `-r` to preload dotenv. Will be useful when you want app to run somewhere file may not exist like running docket container or cloud server.
+- Can leverage this with npm scripts.
 
 # Useful Node Modules
 
