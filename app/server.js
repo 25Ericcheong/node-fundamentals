@@ -1,2 +1,1 @@
-const {port, environment} = require('./config')
-console.log(`Your port is ${port}`);
+console.log(process.env.PORT);
