@@ -40,6 +40,10 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - `console.trace()` will also print stack trace allowing better understanding of 'where did this code come from'
 - Can also measure how long a specific code took to run with `time(variableName)` and `timeEnd(variableName)`
 
+### Expose Functionality from Node using Exports
+
+- To import something, use `const library = require('./library')`. 2 ways to export, `module.exports` and `exports`. First exposes object it points to and latter exposes properties of the objeect it points to. Worth noting that if `module.exports` is executed first, it would replace the `exports.Property` export.
+
 # Useful Node Modules
 
 ## nodemon
