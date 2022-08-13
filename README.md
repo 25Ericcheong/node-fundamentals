@@ -56,6 +56,8 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - Running Tasks: `npm runn <task-name>`. Task name can be found within `scripts` object in the `package.json` which can be used instead of typing out long command.
 - `npm install -g package-name` is a global install. Running `npm root -g` will give indication of where dependency that has been installed for global use is currently located
 - `package-lock.json` is used to keep track of the exact version of every package that is installed to ensure product is reproducible always.
+- `npm list` lists all installed dependencies (lists all dependnecies that top level dependencies depend on as well). `npm list --depth=0` will only display top level packages. To view latest available version for a package on npm repo - `npm view package_name version`
+-
 
 # Useful Node Modules
 
