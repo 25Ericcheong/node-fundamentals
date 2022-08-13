@@ -47,10 +47,12 @@ The plan after this is to then watch the following video: https://www.youtube.co
 ### NPM
 
 - Useful commands that can be added after `npm install <package-name>` like:
-  &nbsp;`--save-dev` which installs and adds entry to `package.json` file _devDependencies_
+  
+  `--save-dev` which installs and adds entry to `package.json` file _devDependencies_
   `--no-save` which installs but does not add entry to `package.json` file _dependencies_
   `--save-optional` which installs and adds entry to `package.json` file _optionalDependencies_
   `--no-optional` which prevents optional dependencies from being installed
+  
   _devDependencies_ and _dependencies_ differences would be that the former contains dev tools like testing library while the latter is bundled with app in production
 - Versioning: `npm update` is used to check all dependencies are within the listed versioning constraints.
 - Running Tasks: `npm runn <task-name>`. Task name can be found within `scripts` object in the `package.json` which can be used instead of typing out long command.
