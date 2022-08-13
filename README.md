@@ -58,6 +58,12 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - `package-lock.json` is used to keep track of the exact version of every package that is installed to ensure product is reproducible always.
 - `npm list` lists all installed dependencies (lists all dependnecies that top level dependencies depend on as well). `npm list --depth=0` will only display top level packages. To view latest available version for a package on npm repo - `npm view package_name version`
 - `npm list -g --depth 0` will list all globally installed packages
+- Development packages not needed for production are like - testing packages, webpack or Babel
+
+### Process.nextTick()
+
+- Node.js event loop, every time an event loop takes a full trip, it is called a tick. Passing function into `process.nextTick()` means that we instruct engine to invoke function at the end of current operation before next event loop tick starts
+- `setTimeout(() => {}, 0)` executes function at the end of next tick which is later than `nextTick()`. Use `nextTick()` when you want that particular code to be used before beginning of next tick
 
 # Useful Node Modules
 
