@@ -65,6 +65,19 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - Node.js event loop, every time an event loop takes a full trip, it is called a tick. Passing function into `process.nextTick()` means that we instruct engine to invoke function at the end of current operation before next event loop tick starts
 - `setTimeout(() => {}, 0)` executes function at the end of next tick which is later than `nextTick()`. Use `nextTick()` when you want that particular code to be used before beginning of next tick
 
+### setImmediate()
+
+- To execute some piece of code asynchronously, as soon as possible. Option is to use `setImmediate()`. Callback function is executed in the next iteration of the event loop.
+- Difference between this from `setTimeout(() => {}, 0)`, `process.nextTick()` and `Promise.then()`?:
+
+`process.nextTick()` is executed on current iteration of event loop, after current operation ends. Meaning, befor `setTimeout` and `setImmediate`
+
+`setTimeout()` is similar ot `setImmediate()` - both will run in the next iteration of event loop
+
+`process.nextTick` callback is added to `process.nextTick queue`. `Promise.then()` callback is added to `promises microtask queue`. A `setTmeout`, `setImmediate` callback is added to macrotask queue.
+
+Event loop executes tasks in `process.nextTick queue` first, then `promises microtask queue` and lastly, `macrotask queue`.
+
 # Useful Node Modules
 
 ## nodemon
