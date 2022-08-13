@@ -47,16 +47,17 @@ The plan after this is to then watch the following video: https://www.youtube.co
 ### NPM
 
 - Useful commands that can be added after `npm install <package-name>` like:
-  
+
   `--save-dev` which installs and adds entry to `package.json` file _devDependencies_
-  
+
   `--no-save` which installs but does not add entry to `package.json` file _dependencies_
-  
+
   `--save-optional` which installs and adds entry to `package.json` file _optionalDependencies_
-  
+
   `--no-optional` which prevents optional dependencies from being installed
-  
+
   _devDependencies_ and _dependencies_ differences would be that the former contains dev tools like testing library while the latter is bundled with app in production
+
 - Versioning: `npm update` is used to check all dependencies are within the listed versioning constraints.
 - Running Tasks: `npm runn <task-name>`. Task name can be found within `scripts` object in the `package.json` which can be used instead of typing out long command.
 - `npm install -g package-name` is a global install. Running `npm root -g` will give indication of where dependency that has been installed for global use is currently located
@@ -75,13 +76,13 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - To execute some piece of code asynchronously, as soon as possible. Option is to use `setImmediate()`. Callback function is executed in the next iteration of the event loop.
 - Difference between this from `setTimeout(() => {}, 0)`, `process.nextTick()` and `Promise.then()`?:
 
-`process.nextTick()` is executed on current iteration of event loop, after current operation ends. Meaning, befor `setTimeout` and `setImmediate`
+  `process.nextTick()` is executed on current iteration of event loop, after current operation ends. Meaning, befor `setTimeout` and `setImmediate`
 
-`setTimeout()` is similar ot `setImmediate()` - both will run in the next iteration of event loop
+  `setTimeout()` is similar ot `setImmediate()` - both will run in the next iteration of event loop
 
-`process.nextTick` callback is added to `process.nextTick queue`. `Promise.then()` callback is added to `promises microtask queue`. A `setTmeout`, `setImmediate` callback is added to macrotask queue.
+  `process.nextTick` callback is added to `process.nextTick queue`. `Promise.then()` callback is added to `promises microtask queue`. A `setTmeout`, `setImmediate` callback is added to macrotask queue.
 
-Event loop executes tasks in `process.nextTick queue` first, then `promises microtask queue` and lastly, `macrotask queue`.
+  Event loop executes tasks in `process.nextTick queue` first, then `promises microtask queue` and lastly, `macrotask queue`.
 
 # Useful Node Modules
 
