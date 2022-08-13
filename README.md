@@ -54,6 +54,8 @@ The plan after this is to then watch the following video: https://www.youtube.co
   _devDependencies_ and _dependencies_ differences would be that the former contains dev tools like testing library while the latter is bundled with app in production
 - Versioning: `npm update` is used to check all dependencies are within the listed versioning constraints.
 - Running Tasks: `npm runn <task-name>`. Task name can be found within `scripts` object in the `package.json` which can be used instead of typing out long command.
+- `npm install -g package-name` is a global install. Running `npm root -g` will give indication of where dependency that has been installed for global use is currently located
+- `package-lock.json` is used to keep track of the exact version of every package that is installed to ensure product is reproducible always.
 
 # Useful Node Modules
 
