@@ -109,6 +109,11 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - Callback function passed will be the one that will be executed upon every request that comes in.
 - Upon receiving new request, `request` event is called which then provide 2 objects - request (`http.IncomingMessage`) and response (`http.ServerResponse`) object.
 - `request` provides request details (can access headers and data) while `response` is used to populate data that we will return to client
+- **Get HTTP Request body data with Node.js**.
+
+  This is with pure Node (no Express or Axios usage). Ccallback function within `createServer` is called when server gets all HTTP headers but not request body
+
+  `request` object passed in the connection callback is called a stream. As such, we listen for body content to be processed and it is processed in chunks. First get data by listening to stream `data` events and when data ends, stream `end` is called.
 
 # Useful Node Modules
 
