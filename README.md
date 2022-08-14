@@ -166,9 +166,9 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
 ### Difference between Development and Production
 
-- Either include in shell configuration or prepreending it to application initialization command eg. `NODE_ENV=production node app.js`.
+- Either include in shell configuration or prepending it to application initialization command eg. `NODE_ENV=production node app.js`.
 - Production ensures logging is kept to minimum (essential level) and more caching level take place to optimize performance.
-- Example of including coditional statements for different input commands
+- Example of including conditional statements for different input commands
 
   ```
   if (process.env.NODE_ENV === 'development') {
@@ -205,4 +205,4 @@ References:
 1. How Node.js Works | Mosh: https://www.youtube.com/watch?v=jOupHNvDIq8
 2. JavaScript - is it Compiled or Interpreted?: https://almogad.medium.com/javascript-is-it-compiled-or-interpreted-9779278468fc
 3. Node.js Everywhere with Environment Variables: https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786
-4. https://www.nearform.com/blog/optimise-node-js-performance-avoiding-broken-promises/
+4. Optimise Node.js Performance By Avoiding Broken Promises - https://www.nearform.com/blog/optimise-node-js-performance-avoiding-broken-promises/
