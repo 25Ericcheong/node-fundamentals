@@ -129,6 +129,11 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - `path.normalize()` will try to calculate actual path, when it contains relative specifiers
 - Note that `resolve` nor `normalize` will check if path exists
 
+### Reading Files
+
+- Using `fs.readFile()` method while passing it a file path, encoding and callback function that will be called wiwth the file data (and error if it fails)
+- Worth noting all three `fs.readFile()`, `fs.readFileSync()` and `fsPromises.readFile()` read fill content of the efile in memory before returning data. If files are big, there will be big impact on memory consumption and speed of execution of program. As such, better option is to read the file content using **streams**.
+
 # Useful Node Modules
 
 ## nodemon
