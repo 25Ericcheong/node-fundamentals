@@ -1,9 +1,17 @@
+// assuming data passed will be in this format
+// {
+//  todo: 'Buy the milk',
+// }
+
 const server = http.createServer((req, res) => {
-  // we can access HTTP headers
+  let data = '';
+
+  // assuming string is being passed here
   req.on('data', chunk => {
-    console.log(`Data chunk available: ${chunk}`);
+    data += chunk;
   });
   req.on('end', () => {
-    // end of data
+    console.log(JSON.parse(data).todo); // 'Buy the milk'
+    res.end();
   });
 });
