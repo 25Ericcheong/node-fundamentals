@@ -148,6 +148,10 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - `fs.rename()` can be used to rename a folder
 - `fs.rmdir()` can then be used to remove folders. If there are contents within folders, use `fs.rm()` instead.
 
+### Key Note about callback and promise based modules
+
+- Using `fs/promises` module instead of the default `fs` module can be used to avoid using callback-based API which can lead to callback hell as shown in the server.js script.
+
 # Useful Node Modules
 
 ## nodemon
