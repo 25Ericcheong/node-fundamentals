@@ -117,6 +117,10 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
   Based on code in `server.js`, we assume request data is a string. We must then concatenate chunks into a string when listening to stream `data` and when stream `end`, will parse string ot JSON. However, since Node.js v10, simplified version can be used instead with the `for await .. of`.
 
+### File Stats
+
+- `stat()` method provided by `fs` module can be used to get file details. `stat()` method receives file paath as an input and will then call a callback function which we pass with 2 parameters - error message and file stats.
+
 # Useful Node Modules
 
 ## nodemon
