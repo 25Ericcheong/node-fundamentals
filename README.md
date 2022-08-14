@@ -134,6 +134,12 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - Using `fs.readFile()` method while passing it a file path, encoding and callback function that will be called wiwth the file data (and error if it fails)
 - Worth noting all three `fs.readFile()`, `fs.readFileSync()` and `fsPromises.readFile()` read fill content of the efile in memory before returning data. If files are big, there will be big impact on memory consumption and speed of execution of program. As such, better option is to read the file content using **streams**.
 
+### Writing Files
+
+- Using `fs.writeFile()` method to write files in Node. By default, API will replace content of file if it exists. Flags can be used to replace default ones
+- If expect to have a file to be in dedicated directory already, `fs.appendFile()` can be used instead.
+- All the listed methods write full content to file before returning control back to your program. As such, better option is to write file content using **streams**.
+
 # Useful Node Modules
 
 ## nodemon

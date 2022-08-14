@@ -1,9 +1,10 @@
 const fs = require('fs');
 
-fs.readFile('./test.txt', 'utf8', (err, data) => {
+const content = 'Some content!';
+
+fs.writeFile('./write-test.txt', content, err => {
   if (err) {
     console.error(err);
-    return;
   }
-  console.log(data);
+  // file written successfully
 });
