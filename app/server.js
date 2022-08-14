@@ -1,9 +1,13 @@
-const EventEmitter = require('events');
+const http = require('http')
 
-const eventEmitter = new EventEmitter();
+const port = process.env.PORT || 3000
 
-eventEmitter.on('start', (start, end) => {
-  console.log(`started from ${start} to ${end}`);
-});
+const server = http.createServer((req, res) => {
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'text/html')
+  res.end('<h1>Hello, World!</h1>')
+})
 
-eventEmitter.emit('start', 1, 100);
+server.listen(port, () => {
+  console.log(`Server running at port ${port}`)
+})
