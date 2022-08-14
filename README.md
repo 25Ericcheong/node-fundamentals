@@ -140,6 +140,14 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - If expect to have a file to be in dedicated directory already, `fs.appendFile()` can be used instead.
 - All the listed methods write full content to file before returning control back to your program. As such, better option is to write file content using **streams**.
 
+### Working with Folders
+
+- `fs.access()` can be used to check if folder exists and if it can be accessed
+- `fs.mkdri()` can be used to create a new folder
+- `fs.readdir()` can be used to read contents of a directory - both files and subfolders and returns their relative path
+- `fs.rename()` can be used to rename a folder
+- `fs.rmdir()` can then be used to remove folders. If there are contents within folders, use `fs.rm()` instead.
+
 # Useful Node Modules
 
 ## nodemon
