@@ -121,6 +121,14 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
 - `stat()` method provided by `fs` module can be used to get file details. `stat()` method receives file paath as an input and will then call a callback function which we pass with 2 parameters - error message and file stats.
 
+### File Paths
+
+- Will need to pay attention to file path. Path can differ for Linus and macOS to Windows. The following will require the `path` module
+- `path.join()` can be used to join two or rmore paths
+- `path.resolve()` can be used to acquire absolute path calculation
+- `path.normalize()` will try to calculate actual path, when it contains relative specifiers
+- Note that `resolve` nor `normalize` will check if path exists
+
 # Useful Node Modules
 
 ## nodemon
