@@ -99,6 +99,17 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - Prepending `await` is the same as `.then` a promise, ensuring that the calling code executes and finishes first before moving on because the next line of code is dependent on the response or output of the previous code
 - Having this layer of abstraction above promises would allow code to be more readable and isolated within functions instead.
 
+### Node.js Event Emitter
+
+- `EventEmitter` class can be used to handle events. `emit` used to trigger an event and `on` is used to add a calback function that will be executed when `emit` is triggered.
+
+### HTTP Server
+
+- `http` module was used. Server is set to listene to port `3000`, when server is read, `listen` callback function is called. Code can be found in branch `6-http-server`.
+- Callback function passed will be the one that will be executed upon every request that comes in.
+- Upon receiving new request, `request` event is called which then provide 2 objects - request (`http.IncomingMessage`) and response (`http.ServerResponse`) object.
+- `request` provides request details (can access headers and data) while `response` is used to populate data that we will return to client
+
 # Useful Node Modules
 
 ## nodemon
