@@ -92,6 +92,7 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - **Orchestrating promises** is used to synchronize different promises. `Promise.all()` can be used to execute a list of promise and executing something when all promises have been resolved.
 - `Promise.race()` is used to execute a promises that finishes first within a list of promises.
 - `Promise.any()` is used to return a single promise that resolves within a list of promises. However, if all promises are rejected, `AggregateError` would be ouputted instead.
+- Explanation on Node.js promises (4). Worth having a reread to refresh memory
 
 ### Async and Await
 
@@ -177,3 +178,4 @@ References:
 1. How Node.js Works | Mosh: https://www.youtube.com/watch?v=jOupHNvDIq8
 2. JavaScript - is it Compiled or Interpreted?: https://almogad.medium.com/javascript-is-it-compiled-or-interpreted-9779278468fc
 3. Node.js Everywhere with Environment Variables: https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786
+4. https://www.nearform.com/blog/optimise-node-js-performance-avoiding-broken-promises/
