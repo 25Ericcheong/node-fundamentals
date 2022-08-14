@@ -84,6 +84,11 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
   Event loop executes tasks in `process.nextTick queue` first, then `promises microtask queue` and lastly, `macrotask queue`.
 
+### JavaScript Promimses
+
+- Vital to understanding `async` and `await`. Promises are also usedi n Web APIs like Battery API, Fetch API and Service Workers
+- An example of chaining promises with the `Node's Fetch API`. https://nodejs.dev/learn/understanding-javascript-promises#consuming-a-promise. In this example, code is used to extract data from a 'todo' json file, a custom function is used to handle the response when the code attempts to load the file. This function would either shortcut the code and produces and error or outputs the response - this is heavily dependent on the status code. The Fetch API returns an object that will either have a `json` or `text` method which can be called. In this case the `json` method was called as the file has a `.json` type.
+
 # Useful Node Modules
 
 ## nodemon
