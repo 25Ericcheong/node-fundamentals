@@ -153,6 +153,10 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
 - Using `fs/promises` module instead of the default `fs` module can be used to avoid using callback-based API which can lead to callback hell as shown in the server.js script.
 
+### Buffers
+
+- It is an area of memory. Represents a fixed-size chunk of memory (can't be resizeed) allocated outside of V8 JavavScript engigne. Used to deal with binary data, in an ecosystem that traditionally only dealt with strings rather than binaries.
+
 # Useful Node Modules
 
 ## nodemon
