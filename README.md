@@ -164,6 +164,22 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - Streams are memory efficient (do not need to load large amount of data in memory) and time efficient (takes less time to start processing data - since we do not need to wait till whole data payload is loaded and processed; which then makes it available)
 - Instead of `readFile`, should use `createReadStream` instead. With that, `pipe()` method can be called on stream object which takes the source and pipes it into a destination.
 
+### Difference between Development and Production
+
+- Either include in shell configuration or prepreending it to application initialization command eg. `NODE_ENV=production node app.js`.
+- Production ensures logging is kept to minimum (essential level) and more caching level take place to optimize performance.
+- Example of including coditional statements for different input commands
+
+  ```
+  if (process.env.NODE_ENV === 'development') {
+    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+  }
+
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.errorHandler());
+  }
+  ```
+
 # Useful Node Modules
 
 ## nodemon
