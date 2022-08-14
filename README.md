@@ -115,7 +115,7 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
   `request` object passed in the connection callback is called a stream. As such, we listen for body content to be processed and it is processed in chunks. First get data by listening to stream `data` events and when data ends, stream `end` is called.
 
-  Based on code in `server.js`, we assume request data is a string. We must then concatenate chunks into a string when listening to stream `data` and when stream `end`, will parse string ot JSON.
+  Based on code in `server.js`, we assume request data is a string. We must then concatenate chunks into a string when listening to stream `data` and when stream `end`, will parse string ot JSON. However, since Node.js v10, simplified version can be used instead with the `for await .. of`.
 
 # Useful Node Modules
 
