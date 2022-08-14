@@ -157,6 +157,13 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
 - It is an area of memory. Represents a fixed-size chunk of memory (can't be resizeed) allocated outside of V8 JavavScript engigne. Used to deal with binary data, in an ecosystem that traditionally only dealt with strings rather than binaries.
 
+### Streams
+
+- Efficient way of handling reading/writing files, network communications or any kind of end-to-end information exchange. Traditionally, when reading a file, file is read into memory from start to finish and then it is processed.
+- With streams, can read it piece by piece, processing content without keeping it all in memory. Streams are instancees of `EventEmitter`
+- Streams are memory efficient (do not need to load large amount of data in memory) and time efficient (takes less time to start processing data - since we do not need to wait till whole data payload is loaded and processed; which then makes it available)
+- Instead of `readFile`, should use `createReadStream` instead. With that, `pipe()` method can be called on stream object which takes the source and pipes it into a destination.
+
 # Useful Node Modules
 
 ## nodemon
