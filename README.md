@@ -84,7 +84,7 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
   Event loop executes tasks in `process.nextTick queue` first, then `promises microtask queue` and lastly, `macrotask queue`.
 
-### JavaScript Promimses
+### JavaScript Promises
 
 - Vital to understanding `async` and `await`. Promises are also usedi n Web APIs like Battery API, Fetch API and Service Workers
 - An example of chaining promises with the `Node's Fetch API`. https://nodejs.dev/learn/understanding-javascript-promises#consuming-a-promise. In this example, code is used to extract data from a 'todo' json file, a custom function is used to handle the response when the code attempts to load the file. This function would either shortcut the code and produces and error or outputs the response - this is heavily dependent on the status code. The Fetch API returns an object that will either have a `json` or `text` method which can be called. In this case the `json` method was called as the file has a `.json` type.
@@ -92,6 +92,12 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - **Orchestrating promises** is used to synchronize different promises. `Promise.all()` can be used to execute a list of promise and executing something when all promises have been resolved.
 - `Promise.race()` is used to execute a promises that finishes first within a list of promises.
 - `Promise.any()` is used to return a single promise that resolves within a list of promises. However, if all promises are rejected, `AggregateError` would be ouputted instead.
+
+### Async and Await
+
+- Built on promises. Prepending `async` keyword to any function means functon will return a `promise`.
+- Prepending `await` is the same as `.then` a promise, ensuring that the calling code executes and finishes first before moving on because the next line of code is dependent on the response or output of the previous code
+- Having this layer of abstraction above promises would allow code to be more readable and isolated within functions instead.
 
 # Useful Node Modules
 
