@@ -208,6 +208,10 @@ The plan after this is to then watch the following video: https://www.youtube.co
 - However, complex code can or may result in callback hell. As such, complex p[eratopms are made up of many functions.
 - Control flow to take note of: **in series** - functions will be executed in a strict sequential order, **full parallel** - when ordering is not an issue and **limited parallel** - parallel with a limit
 
+## Node.js and Express.js (6)
+
+###
+
 # Useful Node Modules
 
 ## nodemon
@@ -235,3 +239,4 @@ References:
 3. Node.js Everywhere with Environment Variables: https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786
 4. Optimise Node.js Performance By Avoiding Broken Promises - https://www.nearform.com/blog/optimise-node-js-performance-avoiding-broken-promises/
 5. Mixu's Node book - http://book.mixu.net/node/ch7.html
+6. Node.js and Express.js - Full Course: https://www.youtube.com/watch?v=Oe421EPjeBE
