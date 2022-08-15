@@ -180,6 +180,28 @@ The plan after this is to then watch the following video: https://www.youtube.co
   }
   ```
 
+### Error Handling
+
+- This might be a viable way (although I question how this would turn out if there were many more chains of promises) to test and find where errors are occurring within promises as shown below
+
+  ```
+  doSomething1()
+    .then(() => {
+      return doSomething2().catch(err => {
+        // handle error
+        throw err; // break the chain!
+      });
+    })
+    .then(() => {
+      return doSomething3().catch(err => {
+        // handle error
+        throw err; // break the chain!
+      });
+    })
+    .catch(err => console.error(err));
+
+  ```
+
 # Useful Node Modules
 
 ## nodemon
