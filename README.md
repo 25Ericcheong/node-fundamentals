@@ -202,6 +202,12 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
   ```
 
+### Async Flow Control
+
+- Material originally came from (5), should read if curious. JavaScript designed to be non-blocking and if main thread is blocked; would result in browser freezing. As such to solve such problem with functional programming - callbacks are used.
+- However, complex code can or may result in callback hell. As such, complex p[eratopms are made up of many functions.
+- Control flow to take note of: **in series** - functions will be executed in a strict sequential order, **full parallel** - when ordering is not an issue and **limited parallel** - parallel with a limit
+
 # Useful Node Modules
 
 ## nodemon
@@ -228,3 +234,4 @@ References:
 2. JavaScript - is it Compiled or Interpreted?: https://almogad.medium.com/javascript-is-it-compiled-or-interpreted-9779278468fc
 3. Node.js Everywhere with Environment Variables: https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786
 4. Optimise Node.js Performance By Avoiding Broken Promises - https://www.nearform.com/blog/optimise-node-js-performance-avoiding-broken-promises/
+5. Mixu's Node book - http://book.mixu.net/node/ch7.html
