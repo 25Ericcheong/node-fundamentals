@@ -210,7 +210,9 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
 ## Node.js and Express.js (6)
 
-###
+### Globals
+
+- Global variables that can be accessed anywhere Examples are `__dirname`, `__filename`, `require` (function to use modules), `module` (info about current module) and `process` (info about environment where program is executed)
 
 # Useful Node Modules
 
