@@ -53,8 +53,10 @@
 // example();
 
 // left the above for reference
-const names = require('./2-modules')
-const data = require('./3-alternative-export')
+// const names = require('./2-modules')
+// const data = require('./3-alternative-export')
 
-console.log(names)
-console.log(data)
+// console.log(names)
+// console.log(data)
+
+require('./4-mind-grenade')
