@@ -53,6 +53,8 @@
 // example();
 
 // left the above for reference
-const names = require('./2-modules');
+const names = require('./2-modules')
+const data = require('./3-alternative-export')
 
-console.log(names);
+console.log(names)
+console.log(data)
