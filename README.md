@@ -240,6 +240,7 @@ Module {
 ```
 
 - Having a function in another module and using `require` from another module to that particular module that invokes a function with specific code included will actually execute code as shown in commit. This can also be done with with ES6 modules. Meaning, importing a module would actually invoke it as well since importing a module actually wraps code within another function.
+- Built-in modules like `os` gives information about the operating systme (can acquire information like `uptime` of computer and `userInfo` of os as well)
 
 # Useful Node Modules
 
