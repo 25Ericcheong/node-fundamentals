@@ -214,6 +214,31 @@ The plan after this is to then watch the following video: https://www.youtube.co
 
 - Global variables that can be accessed anywhere Examples are `__dirname`, `__filename`, `require` (function to use modules), `module` (info about current module) and `process` (info about environment where program is executed)
 
+### Modules
+
+- Every file is a module (by default). `console.log(module)` will output the following
+
+```
+Module {
+  id: '.',
+  path: 'C:\\Users\\ericc\\Documents\\GitHub\\node-fundamentals\\app',
+  exports: {},
+  parent: null,
+  filename: 'C:\\Users\\ericc\\Documents\\GitHub\\node-fundamentals\\app\\2-modules.js',
+  loaded: false,
+  children: [],
+  paths: [
+    'C:\\Users\\ericc\\Documents\\GitHub\\node-fundamentals\\app\\node_modules',
+    'C:\\Users\\ericc\\Documents\\GitHub\\node-fundamentals\\node_modules',
+    'C:\\Users\\ericc\\Documents\\GitHub\\node_modules',
+    'C:\\Users\\ericc\\Documents\\node_modules',
+    'C:\\Users\\ericc\\node_modules',
+    'C:\\Users\\node_modules',
+    'C:\\node_modules'
+  ]
+}
+```
+
 # Useful Node Modules
 
 ## nodemon
