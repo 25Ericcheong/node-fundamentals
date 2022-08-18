@@ -243,7 +243,8 @@ Module {
 - Built-in modules like `os` gives information about the operating systme (can acquire information like `uptime` of computer and `userInfo` of os as well)
 - `path` module (also built-in) can be used for any path related problems (folders mainly leading to a specific file perhaps like the `join` method) or even obtain absolute path for a file with the use of `__dirname` (a global variable)
 - A different way of accessing a specific method from a module - `const {readFileSync} = require('fs')`.
-- With `createServer` that accepts a callback with 2 arguments - `req` and `res`, `req` is a large object. Large object can also be used to obtain what address is client requesting (the endpoint specifically)
+- With `createServer` that accepts a callback with 2 arguments - `req` and `res`, `req` is a large object. Large object can also be used to obtain what address is client requesting (the endpoint specifically).
+- When trying to handle multiple endpoints with multiple different `.end` on the `respond` object, ensure to include `return` statement after in the callback function to prevent code from continuing which will lead to error
 
 # Useful Node Modules
 
