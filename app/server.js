@@ -58,3 +58,14 @@
 
 // console.log(names)
 // console.log(data)
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+
+  res.write("Welcome to page")
+  res.end()
+
+})
+
+server.listen(5000)
