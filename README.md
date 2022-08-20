@@ -246,6 +246,10 @@ Module {
 - With `createServer` that accepts a callback with 2 arguments - `req` and `res`, `req` is a large object. Large object can also be used to obtain what address is client requesting (the endpoint specifically).
 - When trying to handle multiple endpoints with multiple different `.end` on the `respond` object, ensure to include `return` statement after in the callback function to prevent code from continuing which will lead to error
 
+### NPM Commands
+
+- `npm i <packageName>` installs local dependency for project. For global dependency installation - `npm install -g <packageName>` would be used instead. To prepare project for Node project - `npm init -y` will create all required files for Node project.
+
 # Useful Node Modules
 
 ## nodemon
