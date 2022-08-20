@@ -248,9 +248,13 @@ Module {
 
 ### NPM Commands
 
-- `npm i <packageName>` installs local dependency for project. For global dependency installation - `npm install -g <packageName>` would be used instead. To prepare project for Node project - `npm init -y` will create all required files for Node project.
+- `npm i <packageName>` installs local dependency for project. For global dependency installation - `npm install -g <packageName>` would be used instead. To prepare project for Node project - `npm init -y` will create all required files for Node project
 
 # Useful Node Modules
+
+## lodash
+
+- Could possibly look into using this utility package to help with processing certain data type to be in a certain structure or form
 
 ## nodemon
 
