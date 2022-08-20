@@ -253,6 +253,10 @@ Module {
 - Command `nodemon filename` can be shortcut within the `package` file within the `scripts` object as a key which will be used as a keyword to run with the use of NPM
 - Note that `npm keyInScriptsObj` will be used to run the command included within the `scripts` object of the package file. There may be time when `npm keyInScriptsObj` would work but there are times where `npm run keyInScriptsObj` will need to be used instead - just try both
 
+### Global Dependencies
+
+-
+
 # Useful Node Modules
 
 ## lodash
@@ -277,6 +281,10 @@ Module {
 
 - JavaScript used to be an interpreted language (line by line execution) but is now a compiled language (2)
 
+## Basics of Package.json
+
+- More information or basics about `Package.json`. May help with understanding specific aspects of writing a good `Package.json` or debugging (7)
+
 References:
 
 1. How Node.js Works | Mosh: https://www.youtube.com/watch?v=jOupHNvDIq8
@@ -285,3 +293,4 @@ References:
 4. Optimise Node.js Performance By Avoiding Broken Promises - https://www.nearform.com/blog/optimise-node-js-performance-avoiding-broken-promises/
 5. Mixu's Node book - http://book.mixu.net/node/ch7.html
 6. Node.js and Express.js - Full Course: https://www.youtube.com/watch?v=Oe421EPjeBE
+7. The Basics of Package.json in Node.js and npm - NodeSource - http://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/
