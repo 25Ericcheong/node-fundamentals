@@ -249,6 +249,9 @@ Module {
 ### NPM Commands
 
 - `npm i <packageName>` installs local dependency for project. For global dependency installation - `npm install -g <packageName>` would be used instead. To prepare project for Node project - `npm init -y` will create all required files for Node project
+- With `nodemon` package installed, could just `nodemon filename` on CLI and nodemon will continue to observe file changes. If files changes are saved, nodemon will restart server and changes made can be seen then
+- Command `nodemon filename` can be shortcut within the `package` file within the `scripts` object as a key which will be used as a keyword to run with the use of NPM
+- Note that `npm keyInScriptsObj` will be used to run the command included within the `scripts` object of the package file. There may be time when `npm keyInScriptsObj` would work but there are times where `npm run keyInScriptsObj` will need to be used instead - just try both
 
 # Useful Node Modules
 
