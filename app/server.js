@@ -53,16 +53,5 @@
 // example();
 
 // left the above for reference
-// const names = require('./2-modules')
-// const data = require('./3-alternative-export')
 
-// console.log(names)
-// console.log(data)
 
-// lodash is a utility library
-const _ = require('lodash')
-
-const items = [1, [2, [3, [4]]]]
-const newItems = _.flattenDeep(items);
-console.log(newItems);
-console.log('just insert so server restart')
