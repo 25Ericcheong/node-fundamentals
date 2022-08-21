@@ -255,7 +255,8 @@ Module {
 
 ### Node.js Event Loop (important for Express)
 
-- Keyword to recognise is offloading. To ensure code is non blocking, the event loop would registers the callback first (while ensuring all immediate code is executed first).
+- Keyword to recognise is offloading time consuming operations. To ensure code is non blocking, the event loop would registers the callback first (while ensuring all immediate code is executed first). Event loop ensures all requests' operations are executed first (successfully) and would then only begin executing callback functions.
+-
 
 # Useful Node Modules
 
