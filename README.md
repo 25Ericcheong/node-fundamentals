@@ -253,9 +253,9 @@ Module {
 - Command `nodemon filename` can be shortcut within the `package` file within the `scripts` object as a key which will be used as a keyword to run with the use of NPM
 - Note that `npm keyInScriptsObj` will be used to run the command included within the `scripts` object of the package file. There may be time when `npm keyInScriptsObj` would work but there are times where `npm run keyInScriptsObj` will need to be used instead - just try both
 
-### Global Dependencies
+### Node.js Event Loop (important for Express)
 
--
+- Keyword to recognise is offloading. To ensure code is non blocking, the event loop would registers the callback first (while ensuring all immediate code is executed first).
 
 # Useful Node Modules
 
