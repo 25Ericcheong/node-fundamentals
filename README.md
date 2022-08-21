@@ -285,6 +285,10 @@ Module {
 
 - More information or basics about `Package.json`. May help with understanding specific aspects of writing a good `Package.json` or debugging (7)
 
+## Topics covered prior to using Express.js framework
+
+- Event loop, async patterns, events emitter and streams (may need to look into it for better understanding)
+
 References:
 
 1. How Node.js Works | Mosh: https://www.youtube.com/watch?v=jOupHNvDIq8
