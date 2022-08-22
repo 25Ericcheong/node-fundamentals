@@ -55,16 +55,12 @@
 // left the above for reference
 
 
-const { readFile } = require('fs')
+// started os process
+console.log("first")
 
-console.log('started first task')
-readFile('./content/first.txt', 'utf8', (err, result) => {
-  if (err) {
-    console.log(err)
-    return
-  }
-  console.log(result)
-  console.log('completed first task')
-})
+setTimeout(() => {
+  console.log("second")
+}, 0);
 
-console.log('starting next task')
+console.log("third")
+// completed and exited os process
