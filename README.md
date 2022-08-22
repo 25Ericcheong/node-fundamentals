@@ -256,7 +256,10 @@ Module {
 ### Node.js Event Loop (important for Express)
 
 - Keyword to recognise is offloading time consuming operations. To ensure code is non blocking, the event loop would registers the callback first (while ensuring all immediate code is executed first). Event loop ensures all requests' operations are executed first (successfully) and would then only begin executing callback functions.
--
+
+### Async Patterns
+
+- - If there is a `sync` code written and will take time to finish executing, code will be blocked. Even though code is blocked for a separate url path and user is trying to navigate to a different url - user trying to access a different path will neeed to wait for blocking code to finish before having the resources to load their selected url (blocking code)
 
 # Useful Node Modules
 
