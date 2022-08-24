@@ -56,26 +56,31 @@
 
 const { readFile } = require('fs')
 
-// getText = (path) => {
-//   return new Promise ((resolve, reject) => {
-//     readFile(path, 'utf8', (err, data) => {
-//       if (err) {
-//         console.log('error')
-//         reject(err)
-//       } else {
-//         console.log('success')
-//         resolve(data)
-//       }
-//     })
-//   })
-// }
+getText = (path) => {
+  return new Promise ((resolve, reject) => {
+    readFile(path, 'utf8', (err, data) => {
+      if (err) {
+        console.log('error')
+        reject(err)
+      } else {
+        console.log('success')
+        resolve(data)
+      }
+    })
+  })
+}
 
-getText('./content/first.txt')
-  .then((result) => console.log(result))
-  .catch((err) => console.log(err))
+// getText('./content/first.txt')
+//   .then((result) => console.log(result))
+//   .catch((err) => console.log(err))
 
 const start = async() => {
-  const first = await getText('./content/first.txt')
+  try {
+    const first = await getText('./content/first.txt')
+    console.log(first)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 start()
