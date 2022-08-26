@@ -73,7 +73,8 @@ getText = (path) => {
 const start = async() => {
   try {
     const first = await getText('./content/first.txt')
-    console.log(first)
+    const second = await getText('./content/second.txt')
+    console.log(first, second)
   } catch (error) {
     console.log(error)
   }
