@@ -70,10 +70,6 @@ getText = (path) => {
   })
 }
 
-// getText('./content/first.txt')
-//   .then((result) => console.log(result))
-//   .catch((err) => console.log(err))
-
 const start = async() => {
   try {
     const first = await getText('./content/first.txt')
