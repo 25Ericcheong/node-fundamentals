@@ -259,7 +259,9 @@ Module {
 
 ### Async Patterns
 
-- - If there is a `sync` code written and will take time to finish executing, code will be blocked. Even though code is blocked for a separate url path and user is trying to navigate to a different url - user trying to access a different path will neeed to wait for blocking code to finish before having the resources to load their selected url (blocking code)
+- If there is a `sync` code written and will take time to finish executing, code will be blocked. Even though code is blocked for a separate url path and user is trying to navigate to a different url - user trying to access a different path will neeed to wait for blocking code to finish before having the resources to load their selected url (blocking code)
+- `await` gets rid of the problem of callback function. Withou `await`, will need to have multiple `.then` method being called for when there are multiple promises involved
+- `async` gets rid of the problem of writing complex promises if multiple asynchronous functions rely on one and another; with multiple callback functions without a promise of another for say when we want to read and write multiple files
 
 # Useful Node Modules
 
