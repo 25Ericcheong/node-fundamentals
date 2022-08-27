@@ -55,6 +55,8 @@
 // left the above for reference
 
 const { readFile } = require('fs')
+const  util = require('util')
+const readFilePromise = util.promisify(readFile)
 
 getText = (path) => {
   return new Promise ((resolve, reject) => {
