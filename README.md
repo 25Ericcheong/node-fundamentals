@@ -264,6 +264,10 @@ Module {
 - `async` gets rid of the problem of writing complex promises if multiple asynchronous functions rely on one and another; with multiple callback functions without a promise of another for say when we want to read and write multiple files
 - `util` package can also be used to write and read files as well by creating promises on the get go and not relying on callbacks within promises created
 
+### Events
+
+- Calling `require('events')` would be calling a class. Will need to create an instance of this class which would allow us to call its method. The two methods woul be the `on` (to listen for an event) and `emit` (to emit an event)
+
 # Useful Node Modules
 
 ## lodash
