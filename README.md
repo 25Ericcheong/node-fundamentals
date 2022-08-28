@@ -268,6 +268,7 @@ Module {
 
 - Calling `require('events')` would be calling a class. Will need to create an instance of this class which would allow us to call its method. The two methods woul be the `on` (to listen for an event) and `emit` (to emit an event)
 - It is possible to have the same `on` method listen to the same event name or key and have different logics within both of them. This could help with better isolating code separately for better readability
+- On top of the event name or key that will be used to call/initiate the event. Additional arguments can be added to the function too which can then be called with parameters that can be named as required within the callback function of the listening method - `on`
 
 # Useful Node Modules
 
