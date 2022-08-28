@@ -269,6 +269,7 @@ Module {
 - Calling `require('events')` would be calling a class. Will need to create an instance of this class which would allow us to call its method. The two methods woul be the `on` (to listen for an event) and `emit` (to emit an event)
 - It is possible to have the same `on` method listen to the same event name or key and have different logics within both of them. This could help with better isolating code separately for better readability
 - On top of the event name or key that will be used to call/initiate the event. Additional arguments can be added to the function too which can then be called with parameters that can be named as required within the callback function of the listening method - `on`
+- Http module utilizes the `Event` concept which means that it also has the `on` method built with it when a server is created with the `createServer` method. With this, it can also listne to specific event names. All applicable event names can be found in the documentation and are as such `Event: applicableEventName`. The class will extend the `EventEmitter` which explains why it has the `on` method.
 
 # Useful Node Modules
 
