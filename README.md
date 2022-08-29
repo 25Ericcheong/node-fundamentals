@@ -271,6 +271,11 @@ Module {
 - On top of the event name or key that will be used to call/initiate the event. Additional arguments can be added to the function too which can then be called with parameters that can be named as required within the callback function of the listening method - `on`
 - Http module utilizes the `Event` concept which means that it also has the `on` method built with it when a server is created with the `createServer` method. With this, it can also listne to specific event names. All applicable event names can be found in the documentation and are as such `Event: applicableEventName`. The class will extend the `EventEmitter` which explains why it has the `on` method.
 
+### Streams
+
+- Streams used to write or read sequentially. Useful when it comes to reading and writing big files. Types includes writeable, readable, duplex (used to read or write data sequentially) and transform (modify data read).
+- Streams extends `EventEmitter` class and many modules utilizes streams module as well.
+
 # Useful Node Modules
 
 ## lodash
