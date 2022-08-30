@@ -54,15 +54,10 @@
 
 // left the above for reference
 
-const { readFileSync, writeFileSync } = require('fs')
+const { createReadStream } = require('fs')
 
-// amount of data read from file can sometimes be too large to assign to a variable
-const first = readFileSync('./content/first.txt','utf-8')
-const second = readFileSync('./content/second.txt','utf-8')
+const stream = createReadStream('./content/big.txt')
 
-writeFileSync(
-  './content/result-sync.txt',
-   `Here is the result : ${first} ${second}`,
-   { flag: 'a' }
-)
-
+stream.on('data', (result) => {
+  console.log(result)
+})
