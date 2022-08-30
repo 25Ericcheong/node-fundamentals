@@ -4,7 +4,7 @@ const { readFileSync } = require('fs');
 // get all files
 // this does not get called at every request made from client - only when server is instantiated
 // it would however be invoked at every request if it is in the createServer method
-const homePage = readFileSync('./index.html')
+const homePage = readFileSync('./navbar-app//index.html')
 
 // below will always be invoked when user tries to request for something from server via url
 const server = http.createServer((req, res) => {
@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
       200, 
       {'content-type' : 'text/html'}
     )
-    res.write('<h1>Home page</h1>')
+    res.write(homePage)
   }
 
   else if (url === '/about') {
