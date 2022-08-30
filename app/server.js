@@ -54,17 +54,15 @@
 
 // left the above for reference
 
-// the below is a class being called
-const EventEmitter = require('events');
+const { readFileSync, writeFileSync } = require('fs')
 
-const customEmitter = new EventEmitter()
+// amount of data read from file can sometimes be too large to assign to a variable
+const first = readFileSync('./content/first.txt','utf-8')
+const second = readFileSync('./content/second.txt','utf-8')
 
-customEmitter.on('response', (name, id) => {
-  console.log(`data received: ${name} with id: ${id}`)
-})
+writeFileSync(
+  './content/result-sync.txt',
+   `Here is the result : ${first} ${second}`,
+   { flag: 'a' }
+)
 
-customEmitter.on('response', () => {
-  console.log('some other logic here')
-})
-
-customEmitter.emit('response', 'eric', 10)
