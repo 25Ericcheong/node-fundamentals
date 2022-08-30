@@ -58,6 +58,7 @@ const { createReadStream } = require('fs')
 
 const stream = createReadStream('./content/big.txt')
 
+// an event called data is used here to read the big file
 stream.on('data', (result) => {
   console.log(result)
 })

@@ -276,7 +276,7 @@ Module {
 - Streams used to write or read sequentially. Useful when it comes to reading and writing big files. Types includes writeable, readable, duplex (used to read or write data sequentially) and transform (modify data read).
 - Streams extends `EventEmitter` class and many modules utilizes streams module as well.
 - Amount of data read from a very large file can sometimes be too large to assign to a single variable. This can be fixed with the streams option.
-- Data read from a file is read in chunks - by default; the size of the chunks are 64 kB.
+- Data read from a file is read in chunks - by default; the size of the chunks are 64 kB. This can be seen in the `createReadStream` method which creates an instance of `fs.ReadStream` and the instance extends `stream.Readable` which indicates why and where the `data` event has originated from.
 
 # Useful Node Modules
 
