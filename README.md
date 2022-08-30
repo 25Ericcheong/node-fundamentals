@@ -290,7 +290,7 @@ Module {
 - Response/Request structure: Both have start line (will have a method, URL and HTTP version), optional headers, a blank line that indicates all the meta info that has been sent and optional body. Request message's method is GET by default.
 - Headers includes meta information about the request. Inspecting network tab will enablee you to look at the requests received from the server
 - When using HTTP module, can also write the headers of the responds that will be sent to the client (can include content type for a specific status code etc.)
-- Every single `href` paths would mean that the server would need to provide the resources to serve the requests. These links can be found in a HTML file and would then invoke the server's internal resources to provide to the client's request. As such, the paths would need to be included in the server's code in order for the server to provide resources to serve the links included in the HTML file.
+- Every single `href` or `src` paths would mean that the server would need to provide the resources to serve the requests (external requests made to external links would mean that external resources would be involved instead of internal ones). These links can be found in a HTML file and would then invoke the server's internal resources to provide to the client's request. As such, the paths would need to be included in the server's code in order for the server to provide resources to serve the links included in the HTML file.
 
 ### Express
 
