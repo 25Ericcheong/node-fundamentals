@@ -287,7 +287,8 @@ Module {
 ### HTTP Stuff
 
 - Response/Request cycle: URL inputted sends a request to server that is responsible for serving those resources and server then sends back responds. It is not HTTP protocol but its a HTTP messages (this is how data is cycles within the Web)
-- Response/Request structure: Both have start line (will have a method, URL and HTTP version), optional headers, a blank line that indicates all the meta info that has been sent and optional body. Request
+- Response/Request structure: Both have start line (will have a method, URL and HTTP version), optional headers, a blank line that indicates all the meta info that has been sent and optional body. Request message's method is GET by default.
+- Headers are meta information about the request.
 
 # Useful Node Modules
 
