@@ -279,6 +279,11 @@ Module {
 - Data read from a file is read in chunks - by default; the size of the chunks are 64 kB. This can be seen in the `createReadStream` method which creates an instance of `fs.ReadStream` and the instance extends `stream.Readable` which indicates why and where the `data` event has originated from.
 - Note that the default chunk size can be changed with the use of `highWaterMark`. Setting the encoding to `utf8` would then allow us to read/see the content of the files. The `error` event key can then be used to capture error and prevents the app from failling.
 
+### Streams - Http Eg.
+
+- This example can be seen in branch No. 19. With the `readFileSync`, the entire data read from the file is sent to the frontend in 1 request.
+- `pipe` method can be found from the `ReadStream` class which can read then write data in chunks; essentially piping data into a writeable stream
+
 # Useful Node Modules
 
 ## lodash
