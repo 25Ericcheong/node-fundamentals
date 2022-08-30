@@ -277,6 +277,7 @@ Module {
 - Streams extends `EventEmitter` class and many modules utilizes streams module as well.
 - Amount of data read from a very large file can sometimes be too large to assign to a single variable. This can be fixed with the streams option.
 - Data read from a file is read in chunks - by default; the size of the chunks are 64 kB. This can be seen in the `createReadStream` method which creates an instance of `fs.ReadStream` and the instance extends `stream.Readable` which indicates why and where the `data` event has originated from.
+- Note that the default chunk size can be changed with the use of `highWaterMark`. Setting the encoding to `utf8` would then allow us to read/see the content of the files
 
 # Useful Node Modules
 
