@@ -284,6 +284,11 @@ Module {
 - This example can be seen in branch No. 19. With the `readFileSync`, the entire data read from the file is sent to the frontend in 1 request.
 - `pipe` method can be found from the `ReadStream` class which can read then write data in chunks; essentially piping data into a writeable stream
 
+### HTTP Stuff
+
+- Response/Request cycle: URL inputted sends a request to server that is responsible for serving those resources and server then sends back responds. It is not HTTP protocol but its a HTTP messages (this is how data is cycles within the Web)
+- Response/Request structure: Both have start line (will have a method, URL and HTTP version), optional headers, a blank line that indicates all the meta info that has been sent and optional body. Request
+
 # Useful Node Modules
 
 ## lodash
