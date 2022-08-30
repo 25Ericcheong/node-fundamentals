@@ -288,7 +288,11 @@ Module {
 
 - Response/Request cycle: URL inputted sends a request to server that is responsible for serving those resources and server then sends back responds. It is not HTTP protocol but its a HTTP messages (this is how data is cycles within the Web)
 - Response/Request structure: Both have start line (will have a method, URL and HTTP version), optional headers, a blank line that indicates all the meta info that has been sent and optional body. Request message's method is GET by default.
-- Headers are meta information about the request.
+- Headers includes meta information about the request. Inspecting network tab will enablee you to look at the requests received from the server
+
+### Express
+
+- It is built on top of Node; more specifically HTTP module.
 
 # Useful Node Modules
 
