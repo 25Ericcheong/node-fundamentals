@@ -296,6 +296,7 @@ Module {
 
 - It is built on top of Node; more specifically HTTP module. More information about this can be found here (8). A framework that skips the repetitive boilerplate code that is needed when creating multiple endpoints (can clearly be seen when writing purely with Node's Http module)
 - `.all` method is used for when user attempts to access an endpoint that does not exist. Ensuring that the respond has the `404` status code attached to it as well makes sense as the default `200` status code for an error message does not make sense
+- `.static` method is a built in middleware of express. Static asset means it is a file that does not need to be changed by server. Examples are styles, image and javascript files. This will get rid of the need to setting up different file paths for each of these files which is not needed and will be handled by express.
 
 # Useful Node Modules
 
