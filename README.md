@@ -294,7 +294,7 @@ Module {
 
 ### Express
 
-- It is built on top of Node; more specifically HTTP module.
+- It is built on top of Node; more specifically HTTP module. More information about this can be found here (8)
 
 # Useful Node Modules
 
@@ -337,3 +337,4 @@ References:
 5. Mixu's Node book - http://book.mixu.net/node/ch7.html
 6. Node.js and Express.js - Full Course: https://www.youtube.com/watch?v=Oe421EPjeBE
 7. The Basics of Package.json in Node.js and npm - NodeSource - http://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/
+8. Express - https://expressjs.com/
