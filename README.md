@@ -303,6 +303,10 @@ Module {
 - API or templates that are prepared on server's side. In Express, API means that we are setting up a HTTP interface to interact with data which is sent in the form of JSON which is done by `res.json()`.
 - The server side rendering would mean that templating will be done. Meaning, templates will be prepared which will include files like html, css and javascript files that will be sent from the backend to the client and that is done with the `res.render()` method.
 
+### Express: Route Params
+
+- Can be used to get complete / all information about a single item provided that the parameter sent from the client is a unique id can be used extract the item's information.
+
 # Useful Node Modules
 
 ## lodash
