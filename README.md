@@ -298,6 +298,11 @@ Module {
 - `.all` method is used for when user attempts to access an endpoint that does not exist. Ensuring that the respond has the `404` status code attached to it as well makes sense as the default `200` status code for an error message does not make sense
 - `.static` method is a built in middleware of express. Static asset means it is a file that does not need to be changed by server. Examples are styles, image and javascript files. This will get rid of the need to setting up different file paths for each of these files which is not needed and will be handled by express.
 
+### Express: API vs SSR
+
+- API or templates that are prepared on server's side. In Express, API means that we are setting up a HTTP interface to interact with data which is sent in the form of JSON which is done by `res.json()`.
+- The server side rendering would mean that templating will be done. Meaning, templates will be prepared which will include files like html, css and javascript files that will be sent from the backend to the client and that is done with the `res.render()` method.
+
 # Useful Node Modules
 
 ## lodash
