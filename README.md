@@ -305,7 +305,8 @@ Module {
 
 ### Express: Route Params
 
-- Can be used to get complete / all information about a single item provided that the parameter sent from the client is a unique id can be used extract the item's information.
+- Can be used to get complete / all information about a single item provided that the parameter sent from the client is a unique id can be used extract the item's information. This is done by attaching an expected parameter onto the URL which the server will then use to extract all relevant information.
+- Route parameter can be complex and can accept multiple paramters which the server can then utilize to acquire relevant; more specific information to be used by the client and sent as a responds.
 
 # Useful Node Modules
 
