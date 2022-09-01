@@ -295,6 +295,7 @@ Module {
 ### Express
 
 - It is built on top of Node; more specifically HTTP module. More information about this can be found here (8). A framework that skips the repetitive boilerplate code that is needed when creating multiple endpoints (can clearly be seen when writing purely with Node's Http module)
+- `.all` method is used for when user attempts to access an endpoint that does not exist. Ensuring that the respond has the `404` status code attached to it as well makes sense as the default `200` status code for an error message does not make sense
 
 # Useful Node Modules
 
