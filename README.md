@@ -302,11 +302,13 @@ Module {
 
 - API or templates that are prepared on server's side. In Express, API means that we are setting up a HTTP interface to interact with data which is sent in the form of JSON which is done by `res.json()`.
 - The server side rendering would mean that templating will be done. Meaning, templates will be prepared which will include files like html, css and javascript files that will be sent from the backend to the client and that is done with the `res.render()` method.
+- An example of how an API can be structured (9) so that it can easily be used by other developers if the plan is to develop a public API for others to use.
 
-### Express: Route Params
+### Express: Route Params / Query String
 
 - Can be used to get complete / all information about a single item provided that the parameter sent from the client is a unique id can be used extract the item's information. This is done by attaching an expected parameter onto the URL which the server will then use to extract all relevant information.
 - Route parameter can be complex and can accept multiple paramters which the server can then utilize to acquire relevant; more specific information to be used by the client and sent as a responds.
+- Query string is a way to send small amount of information to the backend for usage from the client. A query string begins after the `?` in the URL which will then be used by the backend to extract additional filtered information from the database.
 
 # Useful Node Modules
 
@@ -350,3 +352,4 @@ References:
 6. Node.js and Express.js - Full Course: https://www.youtube.com/watch?v=Oe421EPjeBE
 7. The Basics of Package.json in Node.js and npm - NodeSource - http://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/
 8. Express - https://expressjs.com/
+9. Algolia Hacker Search API - https://hn.algolia.com/api
