@@ -3,6 +3,10 @@ const path = require('path')
 
 const app = express()
 
+// static file will be in this folder
+// setup static and middleware
+app.use(express.static('./public'))
+
 app.get('/', (req, res) => {
 
   // path.resolve would require absolute path
