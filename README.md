@@ -309,6 +309,16 @@ Module {
 - Can be used to get complete / all information about a single item provided that the parameter sent from the client is a unique id can be used extract the item's information. This is done by attaching an expected parameter onto the URL which the server will then use to extract all relevant information.
 - Route parameter can be complex and can accept multiple paramters which the server can then utilize to acquire relevant; more specific information to be used by the client and sent as a responds.
 - Query string is a way to send small amount of information to the backend for usage from the client. A query string begins after the `?` in the URL which will then be used by the backend to extract additional filtered information from the database. The query string consist of key value pairs which will be accessed in the backend and used to extract filtered information.
+- An example when preparing for backend to receive a query string from the client - the code will need to be done as such;
+
+```
+app.get('/api/v1/query', (req,res) => {
+  console.log(req.query)
+  res.send('Hello')
+})
+```
+
+- Assuming that `app` has been invoked with the `express()` method. In this case, an example of a query string can be (inputted into the URL) `domain/api/v1/query?name=eric&id=4`. The query string or object that the backend would receive would be a dictionary object with the keys being name and id while the values being eric and 4 respectively.
 
 # Useful Node Modules
 
