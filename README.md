@@ -319,6 +319,11 @@ app.get('/api/v1/query', (req,res) => {
 ```
 
 - Assuming that `app` has been invoked with the `express()` method. In this case, an example of a query string can be (inputted into the URL) `domain/api/v1/query?name=eric&id=4`. The query string or object that the backend would receive would be a dictionary object with the keys being name and id while the values being eric and 4 respectively.
+- Note, ensure that a `return` is used when returning a responds to the client. This prevents a large error log from appearing as Express expects only 1 respond to occur.
+
+### Express: Middleware
+
+- Express middleware are functions that executes during the request to the server. Each middleware have access to request and respond objects. It is everywhere in Express (heart and soul of it)
 
 # Useful Node Modules
 
