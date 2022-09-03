@@ -1,16 +1,6 @@
 const express = require('express')
 const app = express()
-
-// req => middleware => res
-// express does this for us in the background
-const logger = (req, res, next) => {
-  const method = req.method
-  const url = req.url
-  const time = new Date().getFullYear()
-  console.log(method, url, time)
-
-  next()
-}
+const logger = require('./26-logger')
 
 app.get('/', logger, (req, res) => {
   res.send('Home')
