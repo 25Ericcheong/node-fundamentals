@@ -323,7 +323,22 @@ app.get('/api/v1/query', (req,res) => {
 
 ### Express: Middleware
 
-- Express middleware are functions that executes during the request to the server. Each middleware have access to request and respond objects. It is everywhere in Express (heart and soul of it)
+- Express middleware are functions that executes during the request to the server. Each middleware have access to request and respond objects. It is everywhere in Express (heart and soul of it). Middleware seats between request and respond.
+
+```
+const logger = (req, res, next) => {
+  const method = req.method
+  const url = req.url
+  const time = new Date().getFullYear()
+  console.log(method, url, time)
+}
+
+app.get('/', logger, (req, res) => {
+  res.send('Home')
+})
+```
+
+- Above is an example of passing a middleware function into a specific route. The parameters specified in the logger function are automatically done by Express in the background. Note that - `next` needs to be used in order for the middleware function to know what the next middleware is (to pass on)
 
 # Useful Node Modules
 
