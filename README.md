@@ -338,7 +338,7 @@ app.get('/', logger, (req, res) => {
 })
 ```
 
-- Above is an example of passing a middleware function into a specific route. The parameters specified in the logger function are automatically done by Express in the background. Note that - `next` needs to be used in order for the middleware function to know what the next middleware is (to pass on)
+- Above is an example of passing a middleware function into a specific route. The parameters specified in the logger function are automatically done by Express in the background. Note that - `next` needs to be used in order for the middleware function to know what the next middleware is (to pass on). Or simply executing `res.send('Something')` would do the trick as well. As such, if `next()` isn't invoked, the tab would continuously be loading - waiting for the next middleware function to execute.
 
 # Useful Node Modules
 
