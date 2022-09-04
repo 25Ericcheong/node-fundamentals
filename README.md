@@ -353,6 +353,10 @@ app.use('/api', logger)
 - Each route is also able to accept multiple middleware functions as well by passing an array of functions imported (and note that order does matter as well)
 - Express has its own set of middleware functions that we can use as well.
 
+### Http Methods with Express
+
+- Vanilla JavaScript input forms with `action` essentially appends current route with the `action` value which needs to be handled by including the endpoint in the backend. It will also specify the method type which will need to be specified in the backend as well. Data will be sent in `data form` structure. The `name` for each input form will be the key of the `data form` object.
+
 # Useful Node Modules
 
 ## morgan
