@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const logger = require('./26-logger')
 
-app.use(logger)
+// this will be applied to all routes with /api in it
+app.use('/api', logger)
 
 app.get('/', (req, res) => {
   res.send('Home')
