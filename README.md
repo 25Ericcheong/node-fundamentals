@@ -348,6 +348,8 @@ app.get('/', logger, (req, res) => {
 app.use('/api', logger)
 ```
 
+- `app.use` can also include multiple middleware functions. This can be done by including an array of functions that are imported. However, worth noting that the order of the array will affect the order of functions being invoked first.
+
 # Useful Node Modules
 
 ## lodash
