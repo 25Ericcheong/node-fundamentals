@@ -1,3 +1,4 @@
+const { application } = require('express')
 const express = require('express')
 const app = express()
 let { people } = require('./data')
@@ -15,6 +16,10 @@ app.get('/api/people', (req, res) => {
     success: true,
     data: people
   })
+})
+
+app.post('/api/people', (req, res) => {
+  res.status(201).send('Sucess')
 })
 
 app.post('/login', (req, res) => {
