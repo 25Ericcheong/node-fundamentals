@@ -350,8 +350,14 @@ app.use('/api', logger)
 
 - `app.use` can also include multiple middleware functions. This can be done by including an array of functions that are imported. However, worth noting that the order of the array will affect the order of functions being invoked first.
 - Middleware is powerful as we are able to have logic to dictate and include additional information into the `request` or req in this case with including an additional property first and then possibly allowing the route to access that additional information for processing depending on the intention of the route
+- Each route is also able to accept multiple middleware functions as well by passing an array of functions imported (and note that order does matter as well)
+- Express has its own set of middleware functions that we can use as well.
 
 # Useful Node Modules
+
+## morgan
+
+- Can be used to log information about server or what happens to server when something invokes the server via an endpoint from the client or frontend
 
 ## lodash
 
