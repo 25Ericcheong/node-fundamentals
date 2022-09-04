@@ -7,6 +7,7 @@ app.use(express.static('./methods-public'))
 
 // parse form data 
 // parses incoming data from client
+// note: app.use would apply all routes with this built-in express middleware
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/api/people', (req, res) => {
@@ -17,8 +18,13 @@ app.get('/api/people', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
-  console.log(req.body)
-  res.send('Success')
+  const { name } = req.body
+
+  if (name) {
+    return res.status(200).send(`Welcome ${name}`)
+  }
+
+  res.status(401).send('Please provide credentials')
 })
 
 app.listen(5000, () => {
