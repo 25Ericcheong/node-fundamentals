@@ -355,8 +355,9 @@ app.use('/api', logger)
 
 ### Http Methods with Express
 
-- Vanilla JavaScript input forms with `action` essentially appends current route with the `action` value which needs to be handled by including the endpoint in the backend. It will also specify the method type which will need to be specified in the backend as well. Data will be sent in `data form` structure. The `name` for each input form will be the key of the `data form` object.
+- Vanilla JavaScript input forms with `action` essentially appends current route with the `action` value which needs to be handled by including the endpoint in the backend. It will also specify the method type which will need to be specified in the backend as well. Data will be sent in `data form` structure. The `name` for each input form will be the key of the `form data` object.
 - Note that there is a difference when `POST`-ing a data with form and with JavaScript. This can be identified within the `Headers`; `Content-Type` which will state explicitly whether it is `form-urlencoded` (form data) or not (JavaScript)
+- To identify whether it will be `form data` or not; will need to look for `method` and `action` attribute on `form` tag. With `method` and `action` present, can expect `form data` to be used and will need to parse data sent from frontend.
 
 # Useful Node Modules
 
