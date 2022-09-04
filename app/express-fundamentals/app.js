@@ -11,6 +11,10 @@ app.use(express.static('./methods-public'))
 // note: app.use would apply all routes with this built-in express middleware
 app.use(express.urlencoded({ extended: false }))
 
+// parse json - for straight up http request (not form data)
+// additional middleware to parse
+app.use(express.json())
+
 app.get('/api/people', (req, res) => {
   res.status(200).json({
     success: true,
@@ -19,7 +23,21 @@ app.get('/api/people', (req, res) => {
 })
 
 app.post('/api/people', (req, res) => {
-  res.status(201).send('Sucess')
+  const { name } = req.body
+
+  if (!name) {
+    return res.status(400).json(
+      {
+        success: false, 
+        msg: 'Please provide name'
+      })
+  }
+  
+  return res.status(201).json(
+    {
+      success: true, 
+      person: name
+    })
 })
 
 app.post('/login', (req, res) => {
