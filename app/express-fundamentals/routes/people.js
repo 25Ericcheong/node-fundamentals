@@ -9,12 +9,15 @@ const {
 } = require('../controllers/people')
 
 // refer back to app.js and look at base path created for this which is /api/people
-router.get('/', getPeople)
+// first way of setting up routes
+// router.get('/', getPeople)
+// router.post('/', createPerson)
+// router.put('/:id', updatePerson)
+// router.delete('/:id', deletePerson)
 
-router.post('/', createPerson)
+// can be chained if path is the same
+router.route('/').get(getPeople).post(createPerson)
+router.route('/:id').put(updatePerson).delete(deletePerson)
 
-router.put('/:id', updatePerson)
-
-router.delete('/:id', deletePerson)
 
 module.exports = router
