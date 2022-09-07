@@ -1,5 +1,6 @@
 const express = require('express')
 const people = require('./routes/people')
+const auth = require('./routes/auth')
 
 const app = express()
 
@@ -18,16 +19,8 @@ app.use(express.json())
 // will only be applied to the ones with /api/people
 // /api/people is the base path
 app.use('/api/people', people)
+app.use('/login', auth)
 
-app.post('/login', (req, res) => {
-  const { name } = req.body
-
-  if (name) {
-    return res.status(200).send(`Welcome ${name}`)
-  }
-
-  res.status(401).send('Please provide credentials')
-})
 
 app.listen(5000, () => {
   console.log('Server listening on port 5000')
