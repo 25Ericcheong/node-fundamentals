@@ -363,6 +363,7 @@ app.use('/api', logger)
 ### Express Router
 
 - When more routes included in file, code starts to get more complex. Express router can be used to group routes related to one and another together.
+- Then we can use controllers to further group functions together for the routes located in the routes file.
 
 # Useful Node Modules
 
