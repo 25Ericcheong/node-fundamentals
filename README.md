@@ -360,6 +360,10 @@ app.use('/api', logger)
 - To identify whether it will be `form data` or not; will need to look for `method` and `action` attribute on `form` tag. With `method` and `action` present, can expect `form data` to be used and will need to parse data sent from frontend.
 - Example shown (with regards to `POST` with JavaScript), axios is used just for reference which simplifies code as it is more readable in comparison to utilizing in built fetch function. Server can then create new keys depending on the data sent from the frontend which frontend would then handle based on respond sent from backend.
 
+### Express Router
+
+- When more routes included in file, code starts to get more complex. Express router can be used to group routes related to one and another together.
+
 # Useful Node Modules
 
 ## morgan
